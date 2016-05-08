@@ -1,0 +1,21 @@
+templates:
+  dmb_torrents:
+    transmission:
+      host: localhost
+      port: 9091
+      path: /home/rob/Downloads/dmb
+    inputs:
+      - dreamingtree:
+          username: <dreamingtreeusername>
+          password: <dreamingtreepassword>
+          search: flac16
+          tags: dmb2016
+    accept_all: yes
+    pushover:
+      userkey: 
+      apikey: 
+    download: /usr/local/transmission-watchdir/
+tasks:
+  Dreaming Tree:
+    priority: 1
+    template: dmb_torrents
